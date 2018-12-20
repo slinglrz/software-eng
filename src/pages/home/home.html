@@ -1,0 +1,154 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-row>
+      <ion-col>
+        <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>        
+      </ion-col>
+      <ion-col>
+        <ion-title>{{(profileData | async)?.name}}</ion-title> 
+      </ion-col>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+
+  <ion-toolbar border-top>
+    <ion-segment [(ngModel)]="segment" color="light">
+      <ion-segment-button value="food">
+        Food Delivery
+      </ion-segment-button>
+      <ion-segment-button value="frozen">
+        Frozen Food Delivery
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content class="bg-style">
+  <div [ngSwitch]="segment" class="bg-style">
+    <div padding text-center>
+      <ion-list *ngSwitchCase="'food'">
+        <ion-row style="text-align: center; background-color: white">
+          <ion-col col-auto>
+          </ion-col>
+          <ion-col col-auto>
+            <p style="font-size: 19px">Promotion</p>
+          </ion-col>
+          <ion-col col-auto>
+              <ion-row>
+              <ion-slides autoplay="5000" loop="true" speed="3000">  
+                <ion-slide>
+                    <img src="assets/imgs/11.jpg">
+                  </ion-slide>
+                  <ion-slide >
+                    <img src="assets/imgs/12.jpg">
+                  </ion-slide>
+                  <ion-slide >
+                    <img src="assets/imgs/13.jpg">
+                  </ion-slide>
+                </ion-slides>
+                </ion-row>
+                <h1><u><ion-icon name="star" item-start></ion-icon>Reccomend</u></h1>
+                <br>
+                
+                <div>
+                    <img style="width: 300px; height: 130px;" src="assets/imgs/1.jpeg"/>
+                  </div>
+                  <ion-card-content>
+                      <ion-card-title>
+                        NEW YORK GRILL
+                      </ion-card-title>
+                        <p>
+                          New York Grill ใช้ระบบ จัดส่งอาหาร ถึงผู้บริโภคโดยตรง ถึงยังไม่มีหน้าร้าน แต่ความอร่อยเป็น สไตล์ homemade cooking แม่บ้านอเมริกันค่ะ เมนูที่ เราแนะนำวันนี้ คือ ซี่โครงหมู บาร์บีคิว ชิ้นใหญ่ เนื้อแน่น นุ่มละลาย 
+                        </p>
+                    </ion-card-content>
+                    <button ion-button color="secondary" (click)="goNewYorkPage()">view more</button>
+
+                  
+          </ion-col>          
+        </ion-row>     
+        <!--    
+        <br>
+        <ion-row style="text-align: center; background-color: white">
+          <ion-col col-auto>
+            <ion-icon name="calendar" style="font-size: 30px" color="primary"></ion-icon>
+          </ion-col>
+          <ion-col col-auto>
+            <p style="font-size: 19px">{{(profileData | async)?.birthDate}}</p>
+          </ion-col>          
+        </ion-row>  -->
+      </ion-list>
+    </div>
+
+    <div [ngSwitch]="segment" class="bg-style">
+    <div padding text-center>
+      <ion-list *ngSwitchCase="'frozen'">
+        <ion-row style="text-align: center; background-color: white">
+          <ion-col col-auto>
+          </ion-col>
+          <ion-col col-auto>
+            <p style="font-size: 19px">Promotion</p>
+          </ion-col>
+          <ion-col col-auto>
+              <ion-row>
+                  <ion-slides autoplay="5000" loop="true" speed="3000">
+                      <ion-slide >
+                        <img src="assets/imgs/14.jpg">
+                      </ion-slide>
+                      <ion-slide >
+                        <img src="assets/imgs/15.jpg">
+                      </ion-slide>
+                      <ion-slide >
+                        <img src="assets/imgs/14.jpg">
+                      </ion-slide>
+                    </ion-slides>
+                  </ion-row> 
+                    <h1><u><ion-icon name="star" item-start></ion-icon>Reccomend</u></h1>
+                    <br>
+                    
+                      <ion-card-content>
+                        
+                        <div>
+                        <img src="assets/imgs/16.jpg"/>
+                      </div>
+                        <ion-card-title>
+                            EST
+                        </ion-card-title>
+                        <p>
+                            EST-ONLINES ขอแนะนำสุดยอดเมนูซี่โครงหมู
+                            ที่หมักด้วยเบียร์สูตรพิเศษจากร้าน EST.33 ที่ได้รับเลือกเป็นสุดยอดเบียร์ระดับ Asia’s Best Beer Award 2014 
+                            
+                        </p>
+                      </ion-card-content>
+                      <button ion-button color="secondary" (click)="goESTPage()">view more</button>
+
+                      <ion-card-content>
+                        
+                          <div>
+                              <img src="assets/imgs/17.jpg"/>
+                            </div>
+                          <ion-card-title>
+                              Beef HOF
+                          </ion-card-title>
+                          <p>
+                              Beef HOF เป็นเนื้อพรีเมี่ยมที่ส่งตรงจากประเทศนิวซีแลนด์ ซึ่งคัดพิเศษไม่ว่าจะเป็น Striploin, Ribeye และ Tenderloin อีกทั้งส่วนลิ้นวัว Argentina และ ซี่โครงแกะ Australia Lamb Rack 
+                          </p>
+                        </ion-card-content>
+                        <button ion-button color="secondary" (click)="goBeefPage()">view more</button>
+
+                  
+          </ion-col>          
+        </ion-row>
+		
+		
+	

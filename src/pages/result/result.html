@@ -1,0 +1,36 @@
+<!--
+  Generated template for the ResultPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar color = "secondary">
+      <ion-title><h1>รายการที่เลือก</h1></ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+          
+      <ul>
+          <li><h4>ข้อมูลในการซื้ออาหาร&emsp;&emsp; [ราคา bath]</h4></li>
+          <!-- <li><h4>ขนมปังเนย-น้ำตาล &nbsp;&nbsp;&nbsp;[30bath]</h4></li>
+          <li><h4>นมสด &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;[30bath]</h4></li>
+          <li><h4>ขนมปังสังขยา &emsp;&emsp;[30bath]</h4></li>
+          <li><h4>ค่าบริการ &emsp;&emsp;&emsp;&emsp;[40bath]</h4></li>
+          <li><h4><u>รวมทั้งหมด</u> &emsp;&emsp;&emsp;&emsp;[160bath]</h4></li> -->
+        </ul>
+  
+        <ion-item>
+            <ion-label> <ion-icon name="cash"></ion-icon> coin ส่วนลด 40 coin</ion-label>
+            <ion-checkbox color="secondary" checked="true"></ion-checkbox>
+          </ion-item>
+          <br>
+          <ul><li><h4><u>รวมทั้งหมด</u> &emsp;&emsp;&emsp;&emsp;[ราคารวม bath]</h4></li></ul>
+          <br>
+          <button ion-button color = "secondary" (click)="goPayPage()"  full>ยืนยันรายการ</button>
+          
+  </ion-content>
